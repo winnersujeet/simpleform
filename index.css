@@ -1,0 +1,96 @@
+
+      *{
+         margin:0px;
+         padding: 0px;
+         font-family: "poppins", Helvetica, sans-serif;
+      }
+      body{
+         overflow-x:hidden;
+      }
+      .row {
+         display: flex;
+         width: 100%; 
+      }
+      .nav{
+         width: 100vw;
+         height: 70px; 
+         background-color: slategray;
+         display: inline-block;
+      }
+      .brand-logo{
+         height: auto;
+         text-decoration: none !important;
+         font-size: 20px;
+         margin:  20px;
+         display: block;
+         color: aliceblue; 
+         font-family: "poppins", Helvetica, sans-serif;
+      }
+      .left{
+         float: left;
+         clear: both;
+      }
+      .right{
+         float: right;
+      }
+      .container{
+         margin: 10vw 5vw; 
+         height: auto;
+         width: 95vw;
+         display: flex;
+         flex-flow: row;
+      }
+      .form{
+         width: 40vw;
+         height: auto;
+         margin: 5px; 
+         display: flex;
+         flex-flow: row wrap;
+         background-color: rgb(221, 221, 221);
+         border-radius: 20px;
+         box-shadow: 7px 7px 11px 5px rgb(0 0 34 / 20%);
+         max-width: 325px;
+         min-width: 300px;
+      }
+      .field{
+         display: flex;
+         margin: 20px;
+         height: 40px;
+      }
+      .label {
+         width: 100px;
+         margin: auto 0px;
+      }
+      input{
+         border-radius: 5px;
+         text-decoration: none;
+         height: 30px ;
+      }
+      .form-button{
+         border: 1px solid tomato;
+         color: tomato;
+         padding: 10px;
+         margin: 2px;
+         background-color: white;
+         border-radius: 5px;
+      }
+      .output{
+         width: 50vw;
+         height: auto;
+         margin: 5px;
+         padding: 15px; 
+         display: block;  
+         border-radius: 20px; 
+      }
+      .each-message{
+         background-color: tomato;
+         padding: 20px;
+         border-radius: 4px;
+         color: white;
+         margin: 5px;
+         width: 400px;
+         box-shadow: 7px 7px 11px 5px rgb(0 0 34 / 20%);
+      }
+      .each-message>p{
+         margin: 4px;
+      }
