@@ -116,20 +116,32 @@
    const newElement = document.createElement('div');
    newElement.className = 'each-message';
    const name = document.createElement("p");
-   const nameNode = document.createTextNode(`Name : Mr. ${obj.first_name} ${obj.middle_name} ${obj.last_name}`);
-   name.appendChild(nameNode);
    
    const gender = document.createElement('p');
-   const genderNode = document.createTextNode(`Gender: 
+   // const genderNode = document.createTextNode(`Gender: 
+   // ${obj.gender}`)
+   const genderNode = document.createTextNode(` 
    ${obj.gender}`)
-   gender.append(genderNode)
+   // gender.append(genderNode)
+
+   getGenderLabel = () => {
+      if(obj.gender === "male"){
+         return "Mr"
+      }else { return "Mrs"}
+      console.log("obj.gender -",obj.gender)
+   }
+
+
+
+   const nameNode = document.createTextNode( ` ${getGenderLabel()} ${obj.first_name} ${obj.middle_name} ${obj.last_name}`);
+   name.appendChild(nameNode);
 
    const suggession = document.createElement('p');
-   const suggessionNode = document.createTextNode(`Suggestion :  ${obj.suggession}`);
+   const suggessionNode = document.createTextNode(`  ${obj.suggession}`);
    suggession.appendChild(suggessionNode)
 
    const time = document.createElement('p');
-   const timeNode = document.createTextNode(`Time: ${new Date().toDateString()}`)
+   const timeNode = document.createTextNode(` ${new Date().toDateString()}`)
    time.append(timeNode);
 
   newElement.appendChild(name);
@@ -175,19 +187,19 @@ const restForm = ()=>{
             </div>
          </div>
          <div class="field">
-            <div class="label">Last name</div>
+            <div class="label"> Last name <span style="color: red;">*</span></div>
             <div class="input">
                <input required name="last_name" type="text"> 
             </div>
          </div>
          <div class="field">
-            <div class="label">Suggestion</div>
+            <div class="label">Suggestion <span style="color: red;">*</span></div>
             <div class="input">
                <textarea required name="suggession" style="height:50px; width: 160px; border-radius: 5px;"></textarea> 
             </div>
          </div>
          <div class="field">
-            <div class="label">Gender</div>
+            <div class="label">Gender <span style="color: red;">*</span></div>
             <select name="gender">
                <option value="male">Male</option>
                <option value="female">Female</option>
